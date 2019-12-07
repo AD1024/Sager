@@ -69,3 +69,8 @@ will run `spfa-vis` with all the pre-generated data that target at SPFA with no 
 - SPFA with LLL
 - SPFA with both SLF and LLL
 - Dijkstra
+
+# Limitations
+- Speed of Synthesis
+- Cannot reason about which part cause the greatest efficiency regression (properties of a substructure)
+- Requires an actual implementation of the algorithm written in Racket
