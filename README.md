@@ -5,8 +5,9 @@ A Demonic Graph Synthesizer for Worst Case Performance
 - `sager.rkt` contains the pipeline procedure from synthesizing to scaling and the concrete calls we make to generate data.
 - `core.rkt` contains procedures use incremental solving to synthesize graphs
 - `scaler.rkt` contains utilities for scaling a gadget to a larger graph
+- `graphgen.rkt` contains graph representation and symmetry breaking techniques
 - `helper.rkt` contains some helper function and auxiliary symbolic data structure
-- `./algorithms` contains concrete implementations of target algorithms (SPFAs)
+- `algorithms/` contains concrete implementations of target algorithms (SPFAs)
 
 ## Comparison Data Generators
 Dependency:
