@@ -1,5 +1,5 @@
 # Sager
-A Demonic Graph Synthesizer for Worst Case Performance
+A Demonic Graph Synthesizer for Worst Case Performance. For more information, plase see our report, slides, and `demo.sh`
 
 # Project Structure
 - `sager.rkt` contains the pipeline procedure from synthesizing to scaling and the concrete calls we make to generate data.
