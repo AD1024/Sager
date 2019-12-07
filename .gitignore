@@ -1,0 +1,8 @@
+*.bak
+compiled/
+algorithms/compiled/
+.DS_Store
+*.rkt~
+.vscode
+*.in
+targets/
