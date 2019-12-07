@@ -2,10 +2,10 @@
 A Demonic Graph Synthesizer for Worst Case Performance
 
 # Project Structure
-- `sager.rkt` contains the pipeline procedure from synthesizing to scaling
+- `sager.rkt` contains the pipeline procedure from synthesizing to scaling and the concrete calls we make to generate data.
 - `core.rkt` contains procedures use incremental solving to synthesize graphs
 - `scaler.rkt` contains utilities for scaling a gadget to a larger graph
-- `helper.rkt` contains some auxiliary data
+- `helper.rkt` contains some helper function and auxiliary symbolic data structure
 - `./algorithms` contains concrete implementations of target algorithms (SPFAs)
 
 ## Comparison Data Generators
@@ -37,7 +37,7 @@ Example:
   (sager 
         (map prefix (list "10000" "100000"))   ;; Name of files
         spfa-vis                               ;; Target Algorithm
-        (list '() '())                         ;; Manually constructed Gadgets
+        (list '() '())                         ;; Manually constructed Gadgets (with human insights)
         (list 10000 100000)                    ;; Size of scaled graphs 
         4 30))                                 ;; Size of Synthesized Gadget and Searching Bound
 ```
@@ -65,12 +65,7 @@ will run `spfa-vis` with all the pre-generated data that target at SPFA with no 
 
 ## Implemented Algorithms
 - SPFA
-- SPFA with SLF
-- SPFA with LLL
-- SPFA with both SLF and LLL
+- SPFA+SLF
+- SPFA+LLL
+- SPFA+SLF+LLL
 - Dijkstra
-
-# Limitations
-- Speed of Synthesis
-- Cannot reason about which part cause the greatest efficiency regression (properties of a substructure)
-- Requires an actual implementation of the algorithm written in Racket
